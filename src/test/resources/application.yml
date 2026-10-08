@@ -1,0 +1,17 @@
+spring:
+  config:
+    import:
+      - optional:file:.env[.properties]
+
+gitlab:
+  baseUrl: https://gitlab.ritperm.rt.ru
+  group: rtkpay
+  username: ${GITLAB_USERNAME}
+  password: ${GITLAB_PASSWORD}
+
+releases:
+  keepVersionTags: 'v3.4.+|v3.5.+'
+  keepOtherTags: 'latest|temp|test'
+
+modulesPath: 'classpath:modules.txt'
+
